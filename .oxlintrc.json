@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "pedantic": "warn",
+    "restriction": "error",
+    "perf": "warn",
+    "style": "warn"
+  },
+  "plugins": ["typescript", "oxc", "jsdoc", "import", "promise", "unicorn", "node", "vitest"],
+  "rules": {
+    "vitest/consistent-test-filename": [
+      "warn",
+      { "allTestPattern": "__tests__", "pattern": ".*\\.spec\\.{js,ts}$" }
+    ]
+  }
+}
